@@ -20,21 +20,20 @@ bool Validate5Digits(int number)
      
 }
 int num = ReadInt("Введите пятизначное число => ");
-//if (Validate5Digits(num))
-int Palindrom(int num)
+int Reverse(int num)
 {
-    int r = 0;
+    int current = 0;
     int rev = 0;   
     while (num > 0)
     {
-    r = num % 10;
-    rev = rev*10 + r;
+    current = num % 10;
+    rev = rev*10 + current;
     num = num / 10;
     }
     return rev;
 }
-int number = Palindrom(num);
-    if (num == number)
+int reverse = Reverse(num);
+    if (num == reverse)
     {
         System.Console.WriteLine($"Число {num} - палиндром");
     }
